@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <script>
+    
+   function addtext(){
+      var text = document.getElementById('text');
+      
+      var filter = text.value.toUpperCase();
+      
+      var ul = document.getElementById("myUL");
+      
+      var li = ul.getElementsByTagName('li');
+      
+      var counter  = 0;
+      
+      
+        for (i = 0; i < li.length; i++) {
+         
+            a = li[i].getElementsByTagName("h4")[0];
+        
+            txtValue = a.textContent || a.innerText;
+        
+        
+           if (txtValue.toUpperCase().indexOf(filter) > -1) {
+     
+              li[i].style.display = "";
+               counter++;
+              
+          } 
+          
+            else {
+              li[i].style.display = "none";
+              
+      
+              }
+             
+    
+       }
+    
+    
+    
+    if (counter === 0 ){
+         document.getElementById("pp").innerHTML = "404 eror not found ";
+    }
+    else {
+      document.getElementById("pp").innerHTML = " number of items :" + counter;
+    }
+    
+      
+      
+    }
+    
+   
+    
+    
+  </script>
+  
+  
+  <body onload = "addtext()">
+     <p> OUR STORE</p>
+    
+        
+    <div class = "searchbar"> <input id= 'text' onkeyup="addtext()" > </input> </div>
+      </div>
+      
+<div id = "myUL" class="shop_items">
+  
+  
+  <div class="card">
+  <li>
+  <img src="jeans3.jpg" alt="cakes" style="width:100%">
+  <h4>cakes</h4>
+  <p class="price">$19.99</p>
+</li>
+  </div>
+  
+  <div class="card">
+  <li>
+  <img src="jeans3.jpg" alt="cupcakes" style="width:100%">
+  <h4>cupcakes</h4>
+  <p class="price">$19.99</p>
+  </li>
+  </div>
+  
+  <div class="card">
+  <li>
+  <img src="jeans3.jpg" alt="sweets" style="width:100%">
+  <h4>sweets</h4>
+  <p class="price">$19.99</p>
+  </li>
+</div>      
+
+
+ <div class="card">
+   
+   <li>
+  <img src="jeans3.jpg" alt="Donuts" style="width:100%">
+  <h4>Donuts</h4>
+  <p class="price">$19.99</p>
+  </li>
+  </div>
+  
+  <div class="card">
+  <li>
+  <img src="jeans3.jpg" alt="cakes" style="width:100%">
+  <h4>cakes</h4>
+  <p class="price">$19.99</p>
+  </li>
+  </div>
+  
+  <div class="card">
+    
+  <li>
+  <img src="jeans3.jpg" alt="Donuts" style="width:100%">
+  <h4>Donuts</h4>
+  <p class="price">$19.99</p>
+  </li>
+  </div>
+
+  
+</div>
+
+<p  id = 'pp'></p>
+
+
+ 
+      
+  </body>
+</html>
+
